@@ -39,6 +39,8 @@ jobs:
         with:
           package-manager-cache: false
           component: true
+        env:
+          VITE_APP_VERSION: component
 
   e2e:
     needs: build
