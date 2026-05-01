@@ -22,6 +22,24 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+  component:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile]
+      - uses: cypress-io/github-action@v7
+        with:
+          package-manager-cache: false
+          component: true
+
   e2e:
     needs: build
     runs-on: ubuntu-latest
@@ -48,21 +66,3 @@ jobs:
           package-manager-cache: false
           start: pnpm preview
           browser: ${{ matrix.browser }}
-
-  component:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-      - uses: pnpm/action-setup@v5
-        with:
-          cache: true
-          run_install: |
-            - args: [--prefer-offline, --frozen-lockfile]
-      - uses: cypress-io/github-action@v7
-        with:
-          package-manager-cache: false
-          component: true
