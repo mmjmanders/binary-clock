@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
+  /* Fonts */
   --font-sans: 'Orbitron Variable', sans-serif;
   --font-mono: 'Roboto Mono Variable', monospace;
 
@@ -28,12 +29,12 @@
   }
 
   #app {
-    @apply w-full h-screen grid grid-rows-[4rem_1fr_2rem];
+    @apply w-full h-screen grid grid-rows-[4rem_1fr_2rem] place-items-center;
   }
 
   header,
   footer {
-    @apply flex justify-center items-center gap-1;
+    @apply flex gap-1;
   }
 
   header {
@@ -49,6 +50,6 @@
   }
 
   main {
-    @apply w-full h-full;
+    @apply h-full aspect-square;
   }
 }

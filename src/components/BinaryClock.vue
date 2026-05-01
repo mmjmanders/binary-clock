@@ -5,7 +5,15 @@ const { time } = useClock()
 </script>
 
 <template>
-  <div>{{ time }}</div>
+  <div>
+    {{ time }}
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@reference '../main.css';
+
+div {
+  @apply font-mono text-sm;
+}
+</style>
