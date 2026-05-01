@@ -16,7 +16,7 @@ jobs:
           cache: true
           run_install: |
             - args: [--prefer-offline, --frozen-lockfile, --ignore-scripts]
-      - run: pnpm build-only
+      - run: VITE_APP_VERSION=$(git rev-parse --short HEAD) pnpm build-only
         env:
           APP_BASE: /${{ github.event.repository.name }}/
       - uses: actions/upload-pages-artifact@v5

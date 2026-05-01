@@ -5,3 +5,26 @@
   --font-sans: 'Geist Variable', sans-serif;
   --font-mono: 'Geist Mono Variable', monospace;
 }
+
+@layer components {
+  #app {
+    @apply w-full h-screen grid grid-rows-[4rem_1fr_2rem];
+  }
+
+  header,
+  footer {
+    @apply flex justify-center items-center;
+  }
+
+  header {
+    @apply text-4xl;
+  }
+
+  footer {
+    @apply font-mono text-sm;
+  }
+
+  h1 {
+    @apply font-bold;
+  }
+}
