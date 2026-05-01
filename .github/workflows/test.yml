@@ -62,10 +62,6 @@ jobs:
           cache: true
           run_install: |
             - args: [--prefer-offline, --frozen-lockfile]
-      - uses: actions/download-artifact@v8
-        with:
-          name: build
-          path: dist
       - uses: cypress-io/github-action@v7
         with:
           package-manager-cache: false
