@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BinaryClock from '@/components/BinaryClock.vue'
+
 const { VITE_APP_VERSION: version } = import.meta.env
 </script>
 
@@ -7,7 +9,9 @@ const { VITE_APP_VERSION: version } = import.meta.env
     <font-awesome-icon :icon="['fas', 'square-binary']" />
     <h1>Binary Clock</h1>
   </header>
-  <main></main>
+  <main>
+    <BinaryClock />
+  </main>
   <footer>
     <font-awesome-icon :icon="['fas', 'code-merge']" />
     {{ version }}

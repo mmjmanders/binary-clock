@@ -2,8 +2,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Geist Variable', sans-serif;
-  --font-mono: 'Geist Mono Variable', monospace;
+  --font-sans: 'Orbitron Variable', sans-serif;
+  --font-mono: 'Roboto Mono Variable', monospace;
 }
 
 @layer components {
@@ -13,7 +13,7 @@
 
   header,
   footer {
-    @apply flex justify-center items-center;
+    @apply flex justify-center items-center gap-1;
   }
 
   header {

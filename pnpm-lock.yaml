@@ -12,12 +12,12 @@ overrides:
 importers:
   .:
     dependencies:
-      '@fontsource-variable/geist':
+      '@fontsource-variable/orbitron':
         specifier: ^5.2.8
         version: 5.2.8
-      '@fontsource-variable/geist-mono':
-        specifier: ^5.2.7
-        version: 5.2.7
+      '@fontsource-variable/roboto-mono':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fortawesome/fontawesome-svg-core':
         specifier: ^7.2.0
         version: 7.2.0
@@ -1032,16 +1032,16 @@ packages:
       }
     engines: { node: ^20.19.0 || ^22.13.0 || >=24 }
 
-  '@fontsource-variable/geist-mono@5.2.7':
+  '@fontsource-variable/orbitron@5.2.8':
     resolution:
       {
-        integrity: sha512-ZKlZ5sjtalb2TwXKs400mAGDlt/+2ENLNySPx0wTz3bP3mWARCsUW+rpxzZc7e05d2qGch70pItt3K4qttbIYA==,
+        integrity: sha512-Jazvuj2cgBq663z1j/+JdwH2ztqQ8RaGhJgdHYphFbtfowiFaR74R8UgZl7x1skbXmUMWWH1jXfG7mrYFIYK0A==,
       }
 
-  '@fontsource-variable/geist@5.2.8':
+  '@fontsource-variable/roboto-mono@5.2.8':
     resolution:
       {
-        integrity: sha512-cJ6m9e+8MQ5dCYJsLylfZrgBh6KkG4bOLckB35Tr9J/EqdkEM6QllH5PxqP1dhTvFup+HtMRPuz9xOjxXJggxw==,
+        integrity: sha512-6M2U3wGIUxYNKRrUoKls8BRRIPDA57T8J0agqwyDkiEHrLEEAqptsxcUl3eTm6tnRNEn6yEm4pCefvtnujebDA==,
       }
 
   '@fortawesome/fontawesome-common-types@7.2.0':
@@ -6821,9 +6821,9 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@fontsource-variable/geist-mono@5.2.7': {}
+  '@fontsource-variable/orbitron@5.2.8': {}
 
-  '@fontsource-variable/geist@5.2.8': {}
+  '@fontsource-variable/roboto-mono@5.2.8': {}
 
   '@fortawesome/fontawesome-common-types@7.2.0': {}
 
