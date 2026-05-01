@@ -4,9 +4,29 @@
 @theme {
   --font-sans: 'Orbitron Variable', sans-serif;
   --font-mono: 'Roboto Mono Variable', monospace;
+
+  /* Background layers */
+  --color-void: oklch(10.59% 0.0112 224.71);
+  --color-panel: oklch(15.46% 0.0113 214.39);
+  --color-panel-border: oklch(23.85% 0.0317 218.8);
+
+  /* Neon red — the hero color */
+  --color-neon-red: oklch(63.46% 0.2441 17.38);
+  --color-neon-red-glow: oklch(66.37% 0.2198 16.66);
+  --color-neon-red-dim: oklch(23.77% 0.0801 16.73);
+  --color-neon-red-mid: oklch(43.54% 0.165 17.29);
+
+  /* Text */
+  --color-bright: oklch(93.05% 0.0599 19.9);
+  --color-muted: oklch(45.25% 0.0797 15.9);
+  --color-ghost: oklch(22.57% 0.0373 15.97);
 }
 
 @layer components {
+  body {
+    @apply bg-void text-bright;
+  }
+
   #app {
     @apply w-full h-screen grid grid-rows-[4rem_1fr_2rem];
   }
@@ -26,5 +46,9 @@
 
   h1 {
     @apply font-bold;
+  }
+
+  main {
+    @apply w-full h-full;
   }
 }
