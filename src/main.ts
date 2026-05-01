@@ -1,9 +1,6 @@
 import { createApp } from 'vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCodeMerge, faSquareBinary } from '@fortawesome/free-solid-svg-icons'
 import App from './App.vue'
 import './main.css'
+import faPlugin from './fa-plugin'
 
-library.add(faCodeMerge, faSquareBinary)
-
-createApp(App).mount('#app')
+createApp(App).use(faPlugin).mount('#app')
