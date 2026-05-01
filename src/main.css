@@ -1,1 +1,7 @@
+@import '@/fonts.css';
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Geist Variable', sans-serif;
+  --font-mono: 'Geist Mono Variable', monospace;
+}
