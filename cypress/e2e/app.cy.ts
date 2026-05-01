@@ -1,10 +1,10 @@
 describe('App', () => {
   it('should have correct title', () => {
-    cy.title().should('have.text', 'Binary Clock')
+    cy.title().should('equal', 'Binary Clock')
   })
 
   it('should have correct heading', () => {
-    cy.get('h1').should('contain.text', 'Binary Clock')
+    cy.get('h1').should('have.text', 'Binary Clock')
   })
 
   it('should have correct version', () => {
