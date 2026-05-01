@@ -5,8 +5,8 @@
 export default {
   '*.{svg,yml,yaml}': 'prettier -w --no-error-on-unmatched-pattern',
   '*.{css,html,js,json,ts,vue}': [
-    'eslint --fix --cache',
-    'oxlint --fix',
+    'eslint --fix --cache --no-error-on-unmatched-pattern',
+    'oxlint --fix --no-error-on-unmatched-pattern',
     'prettier -w --no-error-on-unmatched-pattern',
   ],
 }

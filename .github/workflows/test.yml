@@ -1,0 +1,43 @@
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile, --ignore-scripts]
+      - run: pnpm build --mode e2e
+      - uses: actions/upload-artifact@v7
+        with:
+          name: build
+          path: dist
+          if-no-files-found: error
+          retention-days: 1
+
+  e2e:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, edge, firefox]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: |
+            - args: [--prefer-offline, --frozen-lockfile, --ignore-scripts]
+      - uses: actions/download-artifact@v8
+        with:
+          name: build
+          path: dist
+      - uses: cypress-io/github-action@v7
+        with:
+          package-manager-cache: false
+          command: pnpm test:e2e --browser ${{ matrix.browser }}
