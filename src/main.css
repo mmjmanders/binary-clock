@@ -64,4 +64,12 @@
   .display-time {
     @apply font-mono text-sm;
   }
+
+  svg {
+    @apply w-full h-full;
+  }
+
+  rect {
+    @apply fill-panel-border;
+  }
 }

@@ -9,7 +9,11 @@ const displayTime = computed(() => dayjs(time.value).format('HH:mm:ss'))
 
 <template>
   <div class="main-content">
-    <div class="clock">s</div>
+    <div class="clock">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet">
+        <rect width="1600" height="900" />
+      </svg>
+    </div>
     <div class="display-time">{{ displayTime }}</div>
   </div>
 </template>
