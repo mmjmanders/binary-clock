@@ -25,6 +25,7 @@ jobs:
   component:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -45,6 +46,7 @@ jobs:
   e2e:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
@@ -68,3 +70,5 @@ jobs:
           package-manager-cache: false
           start: pnpm preview
           browser: ${{ matrix.browser }}
+        env:
+          TZ: Europe/Amsterdam
