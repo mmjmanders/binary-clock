@@ -17,9 +17,7 @@ const max = computed(() => Math.max(props.leftDigits, props.rightDigits))
 const left = computed(() => Math.floor(props.value / 10))
 const right = computed(() => props.value % 10)
 
-const isOn = (index: number, value: number) => {
-  return index % value === 0
-}
+const isOn = (index: number, value: number): boolean => Boolean((1 << (index - 1)) & value)
 </script>
 
 <template>
