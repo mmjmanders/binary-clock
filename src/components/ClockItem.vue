@@ -28,6 +28,7 @@ const isOn = (index: number, value: number): boolean => Boolean((1 << (index - 1
       r="15"
       cx="40"
       :cy="(max - i) * 54 + 54"
+      class="dot"
       :class="{ 'is-on': isOn(i, left) }"
     />
     <circle
@@ -36,6 +37,7 @@ const isOn = (index: number, value: number): boolean => Boolean((1 << (index - 1
       r="15"
       cx="80"
       :cy="(max - i) * 54 + 54"
+      class="dot"
       :class="{ 'is-on': isOn(i, right) }"
     />
   </g>
