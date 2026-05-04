@@ -1,6 +1,10 @@
 import dayjs from 'dayjs'
 
 describe('App', () => {
+  afterEach(() => {
+    cy.clock().then((clock) => clock.restore())
+  })
+
   it('should have correct title', () => {
     cy.title().should('equal', 'Binary Clock')
   })
@@ -9,9 +13,9 @@ describe('App', () => {
     cy.get('h1').should('have.text', 'Binary Clock')
   })
 
-  // it('should have correct version', () => {
-  //   cy.get('footer').should('contain.text', 'e2e')
-  // })
+  it('should have correct version', () => {
+    cy.get('footer').should('contain.text', 'e2e')
+  })
 
   it('should have clock element', () => {
     cy.get('.clock > svg').should('be.visible')
