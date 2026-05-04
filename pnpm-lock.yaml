@@ -15,6 +15,9 @@ importers:
       '@fontsource-variable/orbitron':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/space-mono':
+        specifier: ^5.2.9
+        version: 5.2.9
       '@fortawesome/fontawesome-svg-core':
         specifier: ^7.2.0
         version: 7.2.0
@@ -1045,6 +1048,12 @@ packages:
     resolution:
       {
         integrity: sha512-Jazvuj2cgBq663z1j/+JdwH2ztqQ8RaGhJgdHYphFbtfowiFaR74R8UgZl7x1skbXmUMWWH1jXfG7mrYFIYK0A==,
+      }
+
+  '@fontsource/space-mono@5.2.9':
+    resolution:
+      {
+        integrity: sha512-b61faFOHEISQ/pD25G+cfGY9o/WW6lRv6hBQQfpWvEJ4y1V+S4gmth95EVyBE2VL3qDYHeVQ8nBzrplzdXTDDg==,
       }
 
   '@fortawesome/fontawesome-common-types@7.2.0':
@@ -6834,6 +6843,8 @@ snapshots:
       levn: 0.4.1
 
   '@fontsource-variable/orbitron@5.2.8': {}
+
+  '@fontsource/space-mono@5.2.9': {}
 
   '@fortawesome/fontawesome-common-types@7.2.0': {}
 
