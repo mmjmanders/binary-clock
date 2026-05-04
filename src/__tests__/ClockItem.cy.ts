@@ -27,7 +27,7 @@ describe('ClockItem', () => {
           value,
         },
       })
-      cy.get('circle.is-on').should('have.length', numOn)
+      cy.get('.dot.is-on').should('have.length', numOn)
     })
   })
 })

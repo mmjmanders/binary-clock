@@ -65,15 +65,15 @@
     @apply font-mono text-sm;
   }
 
-  svg {
+  .clock > svg {
     @apply w-full h-full rounded-lg bg-panel-border;
   }
 
-  circle {
+  circle.dot {
     @apply fill-neon-red-dim;
   }
 
-  circle.is-on {
+  circle.dot.is-on {
     @apply fill-neon-red drop-shadow-neon-red-glow drop-shadow-sm;
   }
 }

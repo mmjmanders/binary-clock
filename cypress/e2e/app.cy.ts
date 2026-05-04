@@ -34,7 +34,7 @@ describe('App', () => {
   })
 
   it('should have 20 dots', () => {
-    cy.get('circle').should('have.length', 20)
+    cy.get('.dot').should('have.length', 20)
   })
 
   /* Parameterized tests */
@@ -45,7 +45,7 @@ describe('App', () => {
         it(`should pass for hours of ${date.format('HH:mm:ss')}`, () => {
           cy.clock(date.toDate())
           cy.visit('/')
-          cy.get('.is-on').should('have.length', numOnForDate(date.toDate()))
+          cy.get('.dot.is-on').should('have.length', numOnForDate(date.toDate()))
           cy.get('.display-time').should('have.text', date.format('HH:mm:ss'))
         })
       })
@@ -58,7 +58,7 @@ describe('App', () => {
         it(`should pass for minutes of ${date.format('HH:mm:ss')}`, () => {
           cy.clock(date.toDate())
           cy.visit('/')
-          cy.get('.is-on').should('have.length', numOnForDate(date.toDate()))
+          cy.get('.dot.is-on').should('have.length', numOnForDate(date.toDate()))
           cy.get('.display-time').should('have.text', date.format('HH:mm:ss'))
         })
       })
@@ -71,7 +71,7 @@ describe('App', () => {
         it(`should pass for seconds of ${date.format('HH:mm:ss')}`, () => {
           cy.clock(date.toDate())
           cy.visit('/')
-          cy.get('.is-on').should('have.length', numOnForDate(date.toDate()))
+          cy.get('.dot.is-on').should('have.length', numOnForDate(date.toDate()))
           cy.get('.display-time').should('have.text', date.format('HH:mm:ss'))
         })
       })
