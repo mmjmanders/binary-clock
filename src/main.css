@@ -74,6 +74,6 @@
   }
 
   circle.is-on {
-    @apply fill-neon-red;
+    @apply fill-neon-red drop-shadow-neon-red-glow drop-shadow-sm;
   }
 }

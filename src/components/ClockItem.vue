@@ -3,8 +3,8 @@ import { computed } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    leftDigits: number
-    rightDigits: number
+    numCirclesLeft: number
+    numCirclesRight: number
     value: number
     offset?: number
   }>(),
@@ -13,7 +13,7 @@ const props = withDefaults(
   },
 )
 
-const max = computed(() => Math.max(props.leftDigits, props.rightDigits))
+const max = computed(() => Math.max(props.numCirclesLeft, props.numCirclesRight))
 const left = computed(() => Math.floor(props.value / 10))
 const right = computed(() => props.value % 10)
 
@@ -23,7 +23,7 @@ const isOn = (index: number, value: number): boolean => Boolean((1 << (index - 1
 <template>
   <g :transform="`translate(${props.offset}, 0)`">
     <circle
-      v-for="i in leftDigits"
+      v-for="i in numCirclesLeft"
       :key="i"
       r="15"
       cx="40"
@@ -31,7 +31,7 @@ const isOn = (index: number, value: number): boolean => Boolean((1 << (index - 1
       :class="{ 'is-on': isOn(i, left) }"
     />
     <circle
-      v-for="i in rightDigits"
+      v-for="i in numCirclesRight"
       :key="i"
       r="15"
       cx="80"
