@@ -4,7 +4,7 @@
 @theme {
   /* Fonts */
   --font-sans: 'Orbitron Variable', sans-serif;
-  --font-mono: 'Roboto Mono Variable', monospace;
+  --font-mono: 'Space Mono Variable', monospace;
 
   /* Background layers */
   --color-void: oklch(10.59% 0.0112 224.71);
