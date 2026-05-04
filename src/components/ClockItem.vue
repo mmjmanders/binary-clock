@@ -14,8 +14,12 @@ const props = withDefaults(
 )
 
 const max = computed(() => Math.max(props.leftDigits, props.rightDigits))
-// const left = computed(() => Math.floor(props.value / 10))
-// const right = computed(() => props.value % 10)
+const left = computed(() => Math.floor(props.value / 10))
+const right = computed(() => props.value % 10)
+
+const isOn = (index: number, value: number) => {
+  return index % value === 0
+}
 </script>
 
 <template>
@@ -26,7 +30,7 @@ const max = computed(() => Math.max(props.leftDigits, props.rightDigits))
       r="15"
       cx="40"
       :cy="(max - i) * 54 + 54"
-      class="fill-neon-red-dim"
+      :class="{ 'is-on': isOn(i, left) }"
     />
     <circle
       v-for="i in rightDigits"
@@ -34,7 +38,7 @@ const max = computed(() => Math.max(props.leftDigits, props.rightDigits))
       r="15"
       cx="80"
       :cy="(max - i) * 54 + 54"
-      class="fill-neon-red-dim"
+      :class="{ 'is-on': isOn(i, right) }"
     />
   </g>
 </template>

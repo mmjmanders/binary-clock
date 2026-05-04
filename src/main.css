@@ -68,4 +68,12 @@
   svg {
     @apply w-full h-full rounded-lg bg-panel-border;
   }
+
+  circle {
+    @apply fill-neon-red-dim;
+  }
+
+  circle.is-on {
+    @apply fill-neon-red;
+  }
 }
