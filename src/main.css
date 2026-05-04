@@ -58,7 +58,7 @@
   }
 
   .clock {
-    @apply max-w-full max-h-full aspect-video;
+    @apply w-[100vmin] max-w-full max-h-full aspect-4/3;
   }
 
   .display-time {
@@ -66,10 +66,6 @@
   }
 
   svg {
-    @apply w-full h-full;
-  }
-
-  rect {
-    @apply fill-panel-border;
+    @apply w-full h-full rounded-lg bg-panel-border;
   }
 }
