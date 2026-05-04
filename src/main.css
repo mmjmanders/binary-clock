@@ -54,11 +54,11 @@
   }
 
   .main-content {
-    @apply w-full h-full flex flex-col justify-center items-center gap-2 p-4;
+    @apply w-full h-full flex flex-col justify-center items-center gap-2;
   }
 
   .clock {
-    @apply w-[100vmin] max-w-full max-h-full aspect-4/3;
+    @apply w-[100vmin] max-w-full max-h-full aspect-4/3 p-4;
   }
 
   .display-time {
