@@ -26,6 +26,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    container:
+      image: cypress/included:15.14.2
+      options: --user 1001
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -41,12 +44,16 @@ jobs:
           package-manager-cache: false
           component: true
         env:
+          CYPRESS_INSTALL_BINARY: 0
           VITE_APP_VERSION: component
 
   e2e:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    container:
+      image: cypress/included:15.14.2
+      options: --user 1001
     strategy:
       fail-fast: false
       matrix:
@@ -71,4 +78,5 @@ jobs:
           start: pnpm preview
           browser: ${{ matrix.browser }}
         env:
+          CYPRESS_INSTALL_BINARY: 0
           TZ: Europe/Amsterdam
