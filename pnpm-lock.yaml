@@ -82,9 +82,6 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
-      is-ci:
-        specifier: ^4.1.0
-        version: 4.1.0
       jiti:
         specifier: ^2.6.1
         version: 2.6.1
@@ -3779,13 +3776,6 @@ packages:
         integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==,
       }
     engines: { node: '>= 0.4' }
-
-  is-ci@4.1.0:
-    resolution:
-      {
-        integrity: sha512-Ab9bQDQ11lWootZUI5qxgN2ZXwxNI5hTwnsvOc1wyxQ7zQ8OkEDw79mI0+9jI3x432NfwbVRru+3noJfXF6lSQ==,
-      }
-    hasBin: true
 
   is-core-module@2.16.1:
     resolution:
@@ -8458,10 +8448,6 @@ snapshots:
       has-tostringtag: 1.0.2
 
   is-callable@1.2.7: {}
-
-  is-ci@4.1.0:
-    dependencies:
-      ci-info: 4.4.0
 
   is-core-module@2.16.1:
     dependencies:
