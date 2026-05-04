@@ -39,8 +39,6 @@ describe('App', () => {
 
   /* Parameterized tests */
   describe('hours', () => {
-    afterEach(() => cy.clock().then((clock) => clock.restore()))
-
     Array.from({ length: 24 })
       .map((_, i) => dayjs(new Date('2026-05-04T00:00:00.000+02:00')).add(i, 'hours'))
       .forEach((date) => {
@@ -53,8 +51,6 @@ describe('App', () => {
   })
 
   describe('minutes', () => {
-    afterEach(() => cy.clock().then((clock) => clock.restore()))
-
     Array.from({ length: 60 })
       .map((_, i) => dayjs(new Date('2026-05-04T00:00:00.000+02:00')).add(i, 'minutes'))
       .forEach((date) => {
@@ -67,8 +63,6 @@ describe('App', () => {
   })
 
   describe('seconds', () => {
-    afterEach(() => cy.clock().then((clock) => clock.restore()))
-
     Array.from({ length: 60 })
       .map((_, i) => dayjs(new Date('2026-05-04T00:00:00.000+02:00')).add(i, 'seconds'))
       .forEach((date) => {
