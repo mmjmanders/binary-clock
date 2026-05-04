@@ -14,10 +14,10 @@ const seconds = computed(() => time.value.getSeconds())
 <template>
   <div class="main-content">
     <div class="clock">
-      <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 360 270" preserveAspectRatio="xMidYMid meet">
         <ClockItem :leftDigits="2" :rightDigits="4" :value="hours" />
-        <ClockItem :leftDigits="3" :rightDigits="4" :offset="400" :value="minutes" />
-        <ClockItem :leftDigits="3" :rightDigits="4" :offset="800" :value="seconds" />
+        <ClockItem :leftDigits="3" :rightDigits="4" :offset="120" :value="minutes" />
+        <ClockItem :leftDigits="3" :rightDigits="4" :offset="240" :value="seconds" />
       </svg>
     </div>
     <div class="display-time">{{ displayTime }}</div>
