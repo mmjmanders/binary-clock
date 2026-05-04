@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@fontsource-variable/orbitron": "^5.2.8",
+    "@fontsource/space-mono": "^5.2.9",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "^3.2.0",
