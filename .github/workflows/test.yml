@@ -38,7 +38,7 @@ jobs:
         with:
           cache: true
           run_install: |
-            - args: [--prefer-offline, --frozen-lockfile]
+            - args: [--prefer-offline, --frozen-lockfile, --ignore-scripts]
       - uses: cypress-io/github-action@v7
         with:
           package-manager-cache: false
@@ -67,7 +67,7 @@ jobs:
         with:
           cache: true
           run_install: |
-            - args: [--prefer-offline, --frozen-lockfile]
+            - args: [--prefer-offline, --frozen-lockfile, --ignore-scripts]
       - uses: actions/download-artifact@v8
         with:
           name: build
